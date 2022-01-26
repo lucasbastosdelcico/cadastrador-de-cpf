@@ -18,5 +18,5 @@ if(cpfValido){
 } else {
     console.log("CPF inválido. Digite direito!");
 }
-
+console.log("vai corinthians")
 console.log("FIM");
