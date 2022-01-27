@@ -1,12 +1,18 @@
 const pessoas = require('./pessoas.json');
+const fs = require ("fs")
 
 // Passo 1: Capturar: nome, cpf, casado, filhos do terminal
 // e guardar em variáveis de mesmos nomes
-console.log("porra")
+const nome = process.argv[2]
+const cpf = process.argv[3]
+const casado = (process.argv[4] == "1 " )
+
 // Passo 2: Criar um objeto com essas informações
+const pessoa = {nome,cpf,casado,filhhos}
 
 // Passo 3: Adicionar o objeto criado ao array pessoas
-
+pessoas.push(pessoas)
 // Passo 4: Salvar o array de pessoas no arquivo pessoas.json
-
-// Passo 5: Mostrar o array de pessoas no dormarto de tabela
+fs.writeFileSync("pessoas.json",JSON.stringify(pessoas,null,4))
+// Passo 5: Mostrar o array de pessoas no formarto de tabela
+console.table(pessoas)
